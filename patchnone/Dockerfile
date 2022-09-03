@@ -48,7 +48,7 @@ RUN ["ldconfig"]
 
 # Build PostGIS 1.5.8
 ADD packages/postgis-1.5.8.tar.gz /usr/local/src/
-ADD packages/postgis-1.5.8-patch/spatial_ref_sys.sql /usr/local/src/postgis-1.5.8/
+# ADD packages/postgis-1.5.8-patch/spatial_ref_sys.sql /usr/local/src/postgis-1.5.8/
 WORKDIR /usr/local/src/postgis-1.5.8
 RUN ./configure CC='gcc-4.7 -m64'
 RUN make
